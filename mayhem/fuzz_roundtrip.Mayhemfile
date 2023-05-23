@@ -1,0 +1,5 @@
+project: lexpr-rs
+target: fuzz-roundtrip
+
+cmds:
+    - cmd: /fuzz_roundtrip

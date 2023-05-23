@@ -1,0 +1,20 @@
+[package]
+name = "fuzz-lexpr"
+version = "0.1.0"
+edition = "2021"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+honggfuzz = "0.5.55"
+
+[dependencies.lexpr]
+path = "../lexpr"
+
+[workspace]
+members = ["."]
+
+[[bin]]
+name = "fuzz_roundtrip"
+path = "fuzz_targets/fuzz_roundtrip.rs"
